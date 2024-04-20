@@ -8,6 +8,10 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+  background-color: #e0e1dc;
+}
+
 :root {
   font-size: 62.5%;
   font-family: "Kanit", sans-serif;
@@ -148,6 +152,7 @@ header {
   justify-content: center;
   padding: 2.2rem;
   gap: 2.4rem;
+  background-color: #fff;
 }
 
 .hero__section-content {
@@ -187,6 +192,7 @@ header {
   width: 100%;
   margin: 5% 0 0 0;
   height: auto;
+  background-color: #fff;
 }
 
 .vitrine__container {
@@ -265,7 +271,7 @@ header {
 
 .vitrine__item--4 {
   grid-column-start: 1;
-  grid-column-end: 8;
+  grid-column-end: 5;
   grid-row-start: 1;
   grid-row-end: 4;
 }
