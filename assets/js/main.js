@@ -6,7 +6,7 @@ const observer = new IntersectionObserver((entries) => {
   });
 });
 
-const observerVideo = new IntersectionObserver((entries) => {
+const observerShow = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
       entry.target.classList.add("animate");
@@ -17,14 +17,33 @@ const observerVideo = new IntersectionObserver((entries) => {
 });
 
 const hiddenElements = document.querySelectorAll(".hidden");
-const videoElements = document.querySelectorAll(".shop__type-card");
+const showElements = document.querySelectorAll(".show");
 
 hiddenElements.forEach((el) => observer.observe(el));
-videoElements.forEach((el) => observerVideo.observe(el));
+showElements.forEach((el) => observerShow.observe(el));
+
+let lastScrollPosition = window.pageYOffset;
 
 window.addEventListener("scroll", function () {
-  var header = document.querySelector(".header__wrapper");
-  if (window.scrollY > 0) {
+  const currentScrollPosition = window.pageYOffset;
+  const header = document.querySelector(".header__wrapper");
+
+  showElements.forEach((el) => {
+    const rect = el.getBoundingClientRect();
+    if (rect.top >= 0 && rect.bottom <= window.innerHeight) {
+      if (currentScrollPosition > lastScrollPosition) {
+        el.classList.add("down");
+        el.classList.remove("up");
+      } else if (currentScrollPosition < lastScrollPosition) {
+        el.classList.add("up");
+        el.classList.remove("down");
+      }
+    }
+  });
+
+  lastScrollPosition = currentScrollPosition;
+
+  if (currentScrollPosition > 0) {
     header.classList.add("on__scroll");
   } else {
     header.classList.remove("on__scroll");

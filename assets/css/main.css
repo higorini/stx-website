@@ -201,7 +201,7 @@ header {
   font: inherit;
   vertical-align: baseline;
   width: 100%;
-  margin: 2rem auto 0 auto;
+  margin: .5rem auto 0 auto;
 }
 
 .vitrine__main {
@@ -219,7 +219,7 @@ header {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: repeat(6, 6vw);
-  grid-gap: 0.5rem;
+  grid-gap: .5rem;
 }
 
 .vitrine__item {
@@ -235,14 +235,11 @@ header {
   font: inherit;
   vertical-align: baseline;
   display: block;
-  transition-property: opacity, transform;
-  transition-timing-function: ease;
-  transition-duration: .7s;
+  transition: all 2s ease;
 }
 
 .vitrine__animate {
   opacity: 1;
-  transform: translateZ(0);
 }
 
 .vitrine__item--1 {
@@ -268,7 +265,7 @@ header {
 
 .vitrine__item--4 {
   grid-column-start: 1;
-  grid-column-end: 5;
+  grid-column-end: 8;
   grid-row-start: 1;
   grid-row-end: 4;
 }
@@ -349,20 +346,22 @@ header {
   align-items: center;
   justify-content: center;
   text-align: center;
-  transform: translateX(-100%);
+}
+
+.up {
+  transform: translateY(50%);
+}
+
+.down {
+  transform: translateY(-50%);
+}
+
+.show {
   transition: all 1s;
 }
 
 .animate {
-  transform: translateX(0);
-}
-
-.shop__type-card:nth-child(2) {
-  transition-delay: 200ms;
-}
-
-.shop__type-card:nth-child(3) {
-  transition-delay: 400ms;
+  transform: translateY(0);
 }
 
 .shop__type-card button {
@@ -376,41 +375,73 @@ header {
 }
 
 .slideshow__container {
-  width: 100%;
-  position: relative;
-  margin: auto;
+  margin: 0 auto;
+  margin-top: 1.8rem;
+  max-width: 140rem;
+  width: 95%;
 }
 
-.slides {
+.slideshow__wrapper .image__list {
+  display: grid;
+  gap: 1.8rem;
+  font-size: 0;
+  margin-bottom: 30px;
+  overflow-x: auto;
+  scrollbar-width: none;
+  grid-template-columns: repeat(10, 1fr);
+}
+
+.slideshow__wrapper .image__list::-webkit-scrollbar {
   display: none;
 }
 
-.slides img {
-  vertical-align: middle;
+.slideshow__wrapper .image__list .image__item {
+  width: 32.5rem;
+  height: 40rem;
+  object-fit: cover;
 }
 
-.prev,
-.next {
-  cursor: pointer;
+.slideshow__container .slider__scrollbar {
+  height: 24px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.slider__scrollbar .scrollbar__tracker {
+  position: relative;
+  height: 2px;
+  width: 100%;
+  background: #ccc;
+  border-radius: 4px;
+}
+
+.slider__scrollbar:hover .scrollbar__tracker {
+  height: 4px;
+}
+
+.slider__scrollbar .scrollbar__thumb {
   position: absolute;
-  top: 50%;
-  width: auto;
-  padding: 16px;
-  margin-top: -22px;
-  color: #fff;
-  font-weight: bold;
-  font-size: 2rem;
-  transition: 0.6s ease;
-  text-align: center;
+  height: 100%;
+  width: 50%;
+  background: #000;
+  border-radius: inherit;
+  cursor: grab;
 }
 
-.next {
+.slider__scrollbar .scrollbar__thumb:active {
+  cursor: grabbing;
+  height: 8px;
+  top: -2px;
+}
+
+.slider__scrollbar .scrollbar__thumb::after {
+  content: "";
+  position: absolute;
+  left: 0;
   right: 0;
-}
-
-.prev:hover,
-.next:hover {
-  background-color: rgba(0, 0, 0, 0.8);
+  top: -10px;
+  bottom: -10px;
 }
 
 .showroom__container {
@@ -576,6 +607,20 @@ footer {
   .header__navlist li a {
     font-size: 1.3rem;
   }
+
+  .slideshow__wrapper .image__list {
+    gap: .6rem;
+    margin-bottom: .9rem;
+  }
+
+  .slideshow__wrapper .image__list .image__item {
+    width: 28rem;
+    height: 38rem;
+  }
+
+  .slider__scrollbar .scrollbar__thumb {
+    width: 20%;
+  }
 }
 
 @media screen and (min-width: 1000px) {
@@ -647,10 +692,6 @@ footer {
   .shop__type-card button {
     width: 28rem;
     font-size: 2.5rem;
-  }
-
-  .slideshow__container {
-    width: 40%;
   }
 
   .showroom__text h2 {

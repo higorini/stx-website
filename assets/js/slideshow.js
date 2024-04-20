@@ -1,57 +1,56 @@
-let slideIndex = 1;
-let timer;
+const initSlider = (sliderId) => {
+  const slider = document.getElementById(sliderId);
+  const imageList = slider.querySelector(".slideshow__wrapper .image__list");
+  const sliderScrollbar = slider.querySelector(".slider__scrollbar");
+  const scrollbarThumb = sliderScrollbar.querySelector(".scrollbar__thumb");
+  const maxScrollLeft = imageList.scrollWidth - imageList.clientWidth;
 
-showSlides(slideIndex);
+  scrollbarThumb.addEventListener("mousedown", (e) => {
+    const startX = e.clientX;
+    const thumbPosition = scrollbarThumb.offsetLeft;
 
-function plusSlides(n) {
-  showSlides((slideIndex += n));
-  resetTimer();
-}
+    const handleMouseMove = (e) => {
+      const deltaX = e.clientX - startX;
+      const newThumbPosition = thumbPosition + deltaX;
+      const maxThumbPosition =
+        sliderScrollbar.getBoundingClientRect().width -
+        scrollbarThumb.offsetWidth;
+      const boundedPosition = Math.max(
+        0,
+        Math.min(maxThumbPosition, newThumbPosition)
+      );
+      const scrollPosition =
+        (boundedPosition / maxThumbPosition) * maxScrollLeft;
 
-function currentSlide(n) {
-  showSlides((slideIndex = n));
-  resetTimer();
-}
+      scrollbarThumb.style.left = `${boundedPosition}px`;
+      imageList.scrollLeft = scrollPosition;
+    };
 
-function showSlides(n) {
-  let i;
-  let slides = document.getElementsByClassName("slides");
+    const handleMouseUp = () => {
+      document.removeEventListener("mousemove", handleMouseMove);
+      document.removeEventListener("mouseup", handleMouseUp);
+    };
 
-  if (n > slides.length) {
-    slideIndex = 1;
-  }
+    document.addEventListener("mousemove", handleMouseMove);
+    document.addEventListener("mouseup", handleMouseUp);
+  });
 
-  if (n < 1) {
-    slideIndex = slides.length;
-  }
+  const updateScrollThumbPosition = () => {
+    const scrollPosition = imageList.scrollLeft;
 
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
+    const thumbPosition =
+      (scrollPosition / maxScrollLeft) *
+      (sliderScrollbar.clientWidth - scrollbarThumb.offsetWidth);
 
-  slides[slideIndex - 1].style.display = "block";
-}
+    scrollbarThumb.style.left = `${thumbPosition}px`;
+  };
 
-function resetTimer() {
-  clearTimeout(timer);
-  timer = setTimeout(() => {
-    plusSlides(1);
-  }, 4000);
-}
+  imageList.addEventListener("scroll", () => {
+    updateScrollThumbPosition();
+  });
+};
 
-let touchStartX = 0;
-document.addEventListener("touchstart", (e) => {
-  touchStartX = e.touches[0].clientX;
+window.addEventListener("load", () => {
+  initSlider("slider1");
+  initSlider("slider2");
 });
-
-document.addEventListener("touchend", (e) => {
-  const touchEndX = e.changedTouches[0].clientX;
-  const touchDiff = touchStartX - touchEndX;
-  if (touchDiff > 50) {
-    plusSlides(1);
-  } else if (touchDiff < -50) {
-    plusSlides(-1);
-  }
-});
-
-resetTimer();
