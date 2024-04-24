@@ -558,11 +558,18 @@ header {
 .shop__type-card button {
   width: 100%;
   background-color: #000;
-  border: none;
   padding: .6rem;
   color: #fff;
-  font-weight: 900;
+  text-transform: uppercase;
+  font-weight: 400;
   font-size: 1.2rem;
+  margin-top: .6rem;
+  transition: .5s ease;
+}
+
+.shop__type-card button:hover {
+  background-color: #e0e1dc;
+  color: #000;
 }
 
 .fundo-branco {
@@ -911,6 +918,11 @@ footer {
     display: none;
   }
 
+  .header__menu-search {
+    justify-content: flex-start;
+    margin-left: 10rem;
+  }
+
   .hero__section {
     margin-top: 4rem;
   }
@@ -999,7 +1011,7 @@ footer {
   }
 
   .shop__type-card button {
-    width: 28rem;
+    margin-top: 1.2rem;
     font-size: 2.5rem;
   }
 
