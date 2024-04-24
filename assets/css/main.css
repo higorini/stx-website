@@ -222,13 +222,11 @@ header {
 .vitrine {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   text-align: left;
-  color: #5f5f5f;
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: 100%;
   box-sizing: border-box;
   padding: 0;
   border: 0;
-  font: inherit;
   vertical-align: baseline;
   width: 100%;
   height: auto;
@@ -246,8 +244,9 @@ header {
 
 .vitrine__header h1 {
   width: 80%;
+  color: #8C8C8C;
   font-size: 1.5rem;
-  font-weight: 400;
+  font-weight: 300;
 }
 
 .vitrine__container {
@@ -387,7 +386,7 @@ header {
 
 .banner__wrapper {
   position: relative;
-  max-width: 80%;
+  max-width: 100%;
   margin: auto;
   margin-top: 3rem;
 }
@@ -444,10 +443,12 @@ header {
   justify-content: center;
   cursor: pointer;
   color: #fff;
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0);
   width: 25px;
   height: 25px;
   margin-top: -15px;
+  border: 1px solid #fff;
+  border-radius: 50%;
   top: 50%;
   font-weight: bold;
   font-size: 1.5rem;
@@ -455,14 +456,12 @@ header {
   user-select: none;
 }
 
-.next {
-  right: 0;
+.prev {
+  left: 10px;
 }
 
-.prev:hover,
-.next:hover {
-  background: rgba(255, 255, 255, 0.8);
-  color: #000;
+.next {
+  right: 10px;
 }
 
 .dots {
@@ -500,9 +499,8 @@ header {
   align-items: center;
   justify-content: center;
   width: 100%;
-  margin-top: 1rem;
+  margin-top: .5rem;
   background-color: #e0e1dc;
-  padding: 3rem 0;
 }
 
 .shop__type {
@@ -603,33 +601,32 @@ header {
 
 .slideshow__wrapper {
   position: relative;
+  overflow: auto;
 }
 
 .slideshow__wrapper .slide__button {
   position: absolute;
   top: 50%;
-  height: 5rem;
-  width: 5rem;
+  height: 2.5rem;
+  width: 2.5rem;
   border: none;
   outline: none;
-  color: #fff;
-  background: #000;
+  color: #000;
+  background: rgba(0, 0, 0, 0);
+  border: 1px solid #000;
+  border-radius: 50%;
   font-size: 2.2rem;
   cursor: pointer;
   transform: translateY(-50%)
 }
 
-.slideshow__wrapper .slide__button:hover {
-  background: #444;
-}
-
 .slideshow__wrapper .slide__button#prev-slide {
-  left: -20px;
+  left: 5px;
   display: none;
 }
 
 .slideshow__wrapper .slide__button#next-slide {
-  right: -20px;
+  right: 5px;
 }
 
 .slideshow__wrapper .image__list {
@@ -660,6 +657,7 @@ header {
 }
 
 .slider__scrollbar .scrollbar__tracker {
+  display: none;
   position: relative;
   height: 2px;
   width: 100%;
