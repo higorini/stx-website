@@ -1,13 +1,39 @@
-function alternarOpacidade() {
-  const imagens = document.querySelectorAll(".vitrine__init");
+document.addEventListener("DOMContentLoaded", function () {
+  const vitrineItems = document.querySelectorAll(".vitrine__init");
 
-  imagens.forEach((imagem, index) => {
-    if (imagem.style.opacity === "1") {
-      imagem.style.opacity = "0";
-    } else {
-      imagem.style.opacity = "1";
-    }
-  });
-}
+  function animateVitrine() {
+    vitrineItems.forEach(function (item) {
+      setTimeout(
+        function () {
+          item.classList.add("show");
+        },
+        parseInt(item.getAttribute("data-delay"))
+      );
+    });
+  }
 
-setInterval(alternarOpacidade, 4000);
+  animateVitrine();
+
+  setInterval(
+    function () {
+      vitrineItems.forEach(function (item) {
+        setTimeout(
+          function () {
+            item.classList.add("show");
+            setTimeout(function () {
+              item.classList.remove("show");
+            }, 2000);
+          },
+          parseInt(item.getAttribute("data-delay"))
+        );
+      });
+    },
+    Math.max(
+      ...Array.from(vitrineItems).map((item) =>
+        parseInt(item.getAttribute("data-delay"))
+      )
+    ) *
+      2 +
+      100
+  );
+});

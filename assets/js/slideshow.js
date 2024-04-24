@@ -1,9 +1,20 @@
 const initSlider = (sliderId) => {
   const slider = document.getElementById(sliderId);
+  const slideButtons = slider.querySelectorAll(
+    ".slideshow__wrapper .slide__button"
+  );
   const imageList = slider.querySelector(".slideshow__wrapper .image__list");
   const sliderScrollbar = slider.querySelector(".slider__scrollbar");
   const scrollbarThumb = sliderScrollbar.querySelector(".scrollbar__thumb");
   const maxScrollLeft = imageList.scrollWidth - imageList.clientWidth;
+
+  slideButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const direction = button.id === "prev-slide" ? -1 : 1;
+      const scrollAmount = imageList.clientWidth * direction;
+      imageList.scrollBy({ left: scrollAmount, behavior: "smooth" });
+    });
+  });
 
   scrollbarThumb.addEventListener("mousedown", (e) => {
     const startX = e.clientX;
@@ -45,7 +56,16 @@ const initSlider = (sliderId) => {
     scrollbarThumb.style.left = `${thumbPosition}px`;
   };
 
+  const handleSlideButtons = () => {
+    slideButtons[0].style.display =
+      imageList.scrollLeft <= 0 ? "none" : "block";
+
+    slideButtons[1].style.display =
+      imageList.scrollLeft >= maxScrollLeft ? "none" : "block";
+  };
+
   imageList.addEventListener("scroll", () => {
+    handleSlideButtons();
     updateScrollThumbPosition();
   });
 };
