@@ -299,15 +299,14 @@ header {
 }
 
 .vitrine__init {
+  z-index: 1;
   opacity: 0;
-  visibility: hidden;
   transition: opacity 2s ease;
 }
 
 .vitrine__init.show {
   opacity: 1;
-  visibility: visible;
-  transition-delay: 0s, 2s;
+  transition: opacity 2s ease;
 }
 
 .vitrine__item--1 {

@@ -20,9 +20,12 @@ document.addEventListener("DOMContentLoaded", function () {
         setTimeout(
           function () {
             item.classList.add("show");
-            setTimeout(function () {
-              item.classList.remove("show");
-            }, 2000);
+            setTimeout(
+              function () {
+                item.classList.remove("show");
+              },
+              Math.random(2000, 4000)
+            );
           },
           parseInt(item.getAttribute("data-delay"))
         );
