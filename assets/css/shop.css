@@ -1,0 +1,267 @@
+header {
+    height: 10vh;
+}
+
+.header__menu {
+    justify-content: flex-start;
+}
+
+.header__navbar {
+    width: 60%;
+}
+
+.shop__hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+}
+
+.shop__hero-container {
+    width: 85%;
+}
+
+.shop__hero-container h1 {
+    font-size: 3rem;
+}
+
+.shop__hero-container p {
+    font-size: 1.5rem;
+}
+
+.categories__section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    padding-bottom: 2.2rem;
+    gap: 2.4rem;
+    background-color: #fff;
+    margin-top: 1rem;
+}
+
+.separador {
+    width: 100%;
+    margin: 0;
+}
+
+.categories__section-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.categories__main {
+    display: flex;
+    gap: 1rem;
+}
+
+.categories__main button {
+    width: 10rem;
+    padding: .5rem;
+    background-color: transparent;
+
+    font-family: "Kanit", sans-serif;
+    font-weight: 500;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+}
+
+.button__value.active {
+    background-color: #000;
+    color: #fff;
+}
+
+.categories__navlist {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    list-style: none;
+    gap: 1rem;
+}
+
+.categories__navlist li {
+    letter-spacing: .3rem;
+}
+
+.categories__navlist button {
+    position: relative;
+    border: none;
+    background-color: transparent;
+    font-family: "Kanit", sans-serif;
+    color: #333;
+    text-decoration: none;
+    transition: 0.3s ease;
+
+    font-size: 1.4rem;
+    text-transform: uppercase;
+}
+
+.categories__navlist button:hover {
+    opacity: 0.7;
+}
+
+.categories__navlist button::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 2px;
+    background-color: #333;
+    transition: width 0.3s ease;
+}
+
+.categories__navlist button:hover::after {
+    width: 100%;
+}
+
+.type__value.activeType::after {
+    width: 100%;
+}
+
+.montra {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.montra__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+}
+
+.montra__interna {
+    display: grid;
+    grid-template-columns: auto;
+    grid-row-gap: .5rem;
+    padding: 2rem 0;
+
+}
+
+.montra__atual {
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+    float: left;
+    margin: 0 auto;
+}
+
+.montra__atual img {
+    width: 100%;
+    object-fit: cover;
+    vertical-align: middle;
+}
+
+.montra__atual h1 {
+    font-weight: 500;
+    font-size: 3rem;
+}
+
+.montra__atual p {
+    text-align: center;
+    font-weight: 300;
+    font-size: 1.5rem;
+}
+
+.montra__atual button {
+    margin-top: 1rem;
+    height: 4rem;
+    width: 16rem;
+    padding: .8rem;
+    background-color: transparent;
+
+    font-family: "Kanit", sans-serif;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 1.4rem;
+}
+
+.montra__atual.not {
+    display: none;
+}
+
+.item {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.item img {
+    width: 100%;
+    object-fit: contain;
+}
+
+.hide {
+    display: none;
+}
+
+.hideType {
+    display: none;
+}
+
+@media screen and (min-width: 1200px) {
+    .header__menu {
+        justify-content: center;
+    }
+
+    .header__navbar {
+        width: 95%;
+        justify-content: space-between;
+        padding: 0;
+    }
+
+    .shop__hero-container {
+        width: 95%;
+    }
+
+    .categories__section-content {
+        width: 100%;
+    }
+
+    .categories__main {
+        width: 95%;
+        justify-content: flex-end;
+    }
+
+    .categories__type {
+        width: 100%;
+    }
+
+    .categories__navlist {
+        width: 95%;
+        justify-content: flex-end;
+    }
+
+    .montra__interna {
+        grid-template-columns: auto auto auto;
+        grid-column-gap: 1rem;
+        grid-row-gap: 1rem;
+    }
+
+    .montra__atual {
+        width: 40rem;
+        height: 50rem;
+    }
+
+    .montra__atual img {
+        width: 58%;
+    }
+
+    .item {
+        width: 40rem;
+        height: 50rem;
+        overflow: hidden;
+    }
+}

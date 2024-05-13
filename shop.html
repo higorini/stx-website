@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>STX</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+  <!-- Icons -->
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0">
+  <!-- CSS -->
+  <link rel="stylesheet" href="./assets/css/main.css" />
+  <link rel="stylesheet" href="./assets/css/shop.css" />
+  <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+</head>
+
+<body>
+  <div class="elfsight-app-daff3d98-4215-4ad8-a066-c2015a5f4247" data-elfsight-app-lazy></div>
+  <header>
+    <div class="header__wrapper">
+      <div class="header__promo">
+        <p>Promoção XX! Até XX% de desconto!</p>
+      </div>
+
+      <div class="header__menu">
+        <div class="header__navbar">
+          <nav>
+            <div class="header__navbar-mobile">
+              <img src="./assets/images/Main/menu.svg" alt="">
+            </div>
+
+            <ul class="header__navlist">
+              <li><a href="/">Home</a></li>
+              <li><a href="/">Loja</a></li>
+              <li><a href="/">Personalize</a></li>
+              <li><a href="./assets/download/stx_catalogo.pdf" target="_blank">Catálogo</a></li>
+              <li><a href="/">Contacto</a></li>
+            </ul>
+          </nav>
+
+          <div class="header__logo">
+            <a href="/"><img src="./assets/images/Main/logo.svg" alt="Logo da Empresa" /></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="shop__hero">
+    <div class="shop__hero-container">
+      <span>Home / Loja</span>
+      <h1>Loja</h1>
+      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium, rerum.</p>
+    </div>
+  </div>
+
+  <div class="categories__section">
+    <div class="separador"></div>
+
+    <div class="categories__section-content">
+      <div class="categories__main">
+        <button class="button__value" onclick="filterType('homem')">homem</button>
+        <button class="button__value" onclick="filterType('mulher')">mulher</button>
+        <button class="button__value" onclick="filterType('infantil')">infantil</button>
+      </div>
+
+      <div class="categories__type">
+        <ul class="categories__navlist">
+          <li><button href="" class="type__value" onclick="filterProduct('todos')">Todos</button></li>
+          <li><button href="" class="type__value" onclick="filterProduct('desporto')">Desporto</button></li>
+          <li><button href="" class="type__value" onclick="filterProduct('inverno')">Inverno</button></li>
+          <li><button href="" class="type__value" onclick="filterProduct('oceano')">Oceano</button></li>
+          <li><button href="" class="type__value" onclick="filterProduct('trabalho')">Trabalho</button></li>
+          <li><button href="" class="type__value" onclick="filterProduct('regular')">Regular</button></li>
+          <li><button href="" class="type__value" onclick="filterProduct('urbano')">Urbano</button></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="separador"></div>
+  </div>
+
+  <div class="montra">
+    <div class="montra__wrapper">
+      <div id="montra__interna" class="montra__interna">
+        <div class="montra__atual not">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="fundo-branco">
+    <h1>últimas novidades</h1>
+    <div class="slideshow__container show" id="slider2">
+      <div class="slideshow__wrapper">
+        <button id="prev-slide" class="slide__button material-symbols-rounded">chevron_left</button>
+        <div class="image__list">
+          <img src="./assets/images/slides/Estampas/02.jpg" alt="Slideshow Image 2" class="image__item">
+          <img src="./assets/images/slides/Estampas/05.jpg" alt="Slideshow Image 5" class="image__item">
+          <img src="./assets/images/slides/Estampas/07.jpg" alt="Slideshow Image 7" class="image__item">
+          <img src="./assets/images/slides/Estampas/08.jpg" alt="Slideshow Image 8" class="image__item">
+          <img src="./assets/images/slides/Estampas/09.jpg" alt="Slideshow Image 9" class="image__item">
+          <img src="./assets/images/slides//Estampas/10.jpg" alt="Slideshow Image 10" class="image__item">
+        </div>
+        <button id="next-slide" class="slide__button material-symbols-rounded">chevron_right</button>
+      </div>
+      <div class="slider__scrollbar">
+        <div class="scrollbar__tracker">
+          <div class="scrollbar__thumb"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer__wrapper">
+      <div class="footer__social-info">
+        <div class="footer__header">
+          <h2>LOREM IPSUM</h2>
+          <h1>LOREM IPSUM</h1>
+          <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum tempore, maiores blanditiis harum fuga
+            in
+            aliquid cupiditate dolores assumenda debitis cum officiis sed velit ipsam, magnam nulla est ipsum
+            saepe!</span>
+        </div>
+
+        <div class="footer__social">
+          <img class="top" src="./assets/images/Main/line-top.svg" alt="">
+          <div class="social__icons">
+            <p>SIGA-NOS</p>
+            <img class="middle" src="./assets/images/Main/line-middle.svg" alt="">
+            <div class="icons">
+              <img src="./assets/images/Main/icon-face.svg" alt=""></img>
+              <img src="./assets/images/Main/icon-yt.svg" alt=""></img>
+              <img src="./assets/images/Main/icon-insta.svg" alt=""></img>
+              <img src="./assets/images/Main/icon-twitter.svg" alt=""></img>
+            </div>
+          </div>
+          <img class="bottom" src="./assets/images/Main/line-bottom.svg" alt="">
+        </div>
+
+        <div class="footer__medals">
+          <img src="./assets/images/Main/medals.svg" alt="">
+        </div>
+      </div>
+
+      <div class="footer__info">
+        <h2>LOREM IPSUM</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisci elit</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./assets/js/main.js"></script>
+  <script src="./assets/js/mobile-navbar.js"></script>
+  <script src="./assets/js/slideshow.js"></script>
+  <script src="./assets/js/product.js"></script>
+  <script src="./assets/js/products.js"></script>
+</body>
+
+</html>
