@@ -90,6 +90,13 @@ function showProduct(product) {
   montraAtual.appendChild(productButton);
 
   montraAtual.classList.remove("not");
+
+  let position = montraAtual.getBoundingClientRect();
+
+  window.scrollTo({
+    top: window.pageYOffset + position.top - 150,
+    behavior: "smooth",
+  });
 }
 
 window.onload = () => {
