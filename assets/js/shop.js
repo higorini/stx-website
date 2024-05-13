@@ -22,6 +22,22 @@ function fillProductDetails(product) {
     window.location.href = `shop?id=${product.id}`;
   });
   productBuyElement.appendChild(buyButton);
+
+  updateBreadcrumb(product.productName);
+}
+
+function updateBreadcrumb(productName) {
+  const breadcrumb = document.getElementById("breadcrumb");
+  const breadcrumbLinks = breadcrumb.querySelectorAll("a");
+
+  breadcrumb.innerHTML = "";
+
+  breadcrumbLinks.forEach((link) => {
+    breadcrumb.appendChild(link);
+    breadcrumb.appendChild(document.createTextNode(" / "));
+  });
+
+  breadcrumb.appendChild(document.createTextNode(productName));
 }
 
 function getUrlParameter(name) {
