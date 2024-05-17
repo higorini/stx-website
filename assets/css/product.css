@@ -1,72 +1,376 @@
-.shop__hero {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-top: 4rem;
-    margin-bottom: 4rem;
+:root {
+    --black-silver: #000000;
+    --red-navy: #ff2016;
+    --charcoal-red: #394140;
+    --white-navy: #fff;
+    --royal-blue: #002ea5;
+    --navy-silver: #002538;
+    --silver-green: #c1c8c4;
+    --white: #fff;
+    --black: #000;
+    --red: #cc142c;
+    --fucsia-fluor: #fb7699;
+    --gold-fluor: #e5e934;
+    --navy: #26314e;
+    --khaki: #4e4a34;
+    --orange: #ff681e;
+    --turquoise: #00a7b7;
+    --lime-fluor: #3ad530;
+    --orange-fluor: #ff4612;
+    --silver: #c0c0c0;
+    --graphite: #303030;
+    --lime: #78b221;
+    --gold: #ffcd0e;
+    --aqua: #007299;
+    --sky-blue: #97d5eb;
+    --grey: #3f3c3d;
+    --dark-rose: #703639;
+    --denin-vaquero: #405164;
+    --bottle-green: #284634;
+    --azzure: #3a8ddf;
+    --emerald: #00a98d;
+    --lime-stone: #d5bb8d;
+    --raspberry: #af0060;
+    --zinc: #898a8c;
+    --cardinal: #5f253a;
 }
 
-.shop__hero-container {
-    width: 85%;
+.section {
+    background-color: #e0e1dc;
 }
 
-.shop__hero-container h1 {
-    font-size: 3rem;
+.container {
+    max-width: 1200px;
+    padding: 0 15px;
+    margin: 0 auto;
 }
 
-.shop__hero-container p {
-    font-size: 1.5rem;
-}
-
-.product {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.product__main {
-    width: 100%;
+.wrapper {
     display: grid;
-    grid-template-columns: 2, 1fr;
+    justify-content: center;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 40px;
 }
 
-.product__info {
+.image,
+.summary {
     width: 100%;
+    height: auto;
+}
+
+.product .main__image img {
+    width: 100%;
+}
+
+.product .outer__thumb {
+    display: none;
+}
+
+.product .outer__thumb .item {
+    height: fit-content !important;
+    cursor: pointer;
+}
+
+.product .thumb__wrap {
+    position: relative;
+    width: 70px;
+    height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.product .thumb__wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.product .outer__thumb img {
+    transition: transform .3s;
+}
+
+.product .outer__thumb .swiper-slide-thumb-active .thumb__wrap,
+.product .outer__thumb .item:hover .thumb__wrap {
+    border: 1px solid #000;
+}
+
+.product .outer__thumb .swiper-slide-thumb-active .thumb__wrap img,
+.product .outer__thumb .item:hover .thumb__wrap img {
+    transform: scale3d(0.85, 0.85, 0.85);
+}
+
+.product .custom-pagination {
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+}
+
+.summary {
+    display: flex;
+}
+
+.summary .entry {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.summary .wrap:has(button) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.summary button {
+    background-color: transparent;
+    border: 1px solid black;
     display: flex;
     align-items: center;
     justify-content: center;
-    grid-column: 1;
+    flex-shrink: 0;
+    cursor: pointer;
 }
 
-.product__gallery {
+.summary .wrap>button {
+    width: 40px;
+    height: 40px;
+    transition: box-shadow .3s;
+}
+
+.summary .product__color button {
+    border-radius: 50%;
+    border: transparent;
+}
+
+.summary .product__color button.selected,
+.summary .product__color button:hover:not(.selected) {
+    box-shadow: inset 0 0 0 4px #000000;
+}
+
+.summary .product__size button {
+    font-family: "Kanit", sans-serif;
+    font-size: 2rem;
+    line-height: 44px;
+}
+
+.summary .product__size button.selected,
+.summary .product__size button:hover:not(.selected) {
+    background: #000;
+    color: #fff;
+}
+
+.summary .product__action .whatsapp__button button {
     width: 100%;
-    display: flex;
+    height: 4rem;
+    border: 1px solid #000;
+    font-family: "Kanit", sans-serif;
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 44px;
+    transition: ease .3s;
+}
+
+.summary .product__action .whatsapp__button button:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+.description p {
+    font-size: 1.6rem;
+    line-height: 24px;
+}
+
+.product__tabs {
+    width: 100%;
+    background-color: white;
+    padding: 15px;
+    box-shadow: 0 2px 16px rgba(0, 0, 0, .1);
+}
+
+.tab__box {
+    position: relative;
+    width: 100%;
+    justify-content: space-around;
     align-items: center;
-    justify-content: center;
-    grid-column: 2;
+    border-bottom: 2px solid rgba(229, 229, 299);
 }
 
-.product__description {
-    width: 100%;
-    display: grid;
-    grid-template-columns: 2, 1fr;
+.tab__box .tab__btn {
+    font-family: "Kanit";
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #919191;
+    background: none;
+    border: none;
+    padding: 18px;
+    cursor: pointer;
 }
 
-.description__image {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    grid-column: 1;
+.tab__box .tab__btn.active {
+    color: #000;
 }
 
-.description__text {
+.line {
+    position: absolute;
+    top: 59px;
+    left: 0px;
+    width: 5px;
+    height: 90px;
+    background-color: #000;
+    transition: all .3s ease-in-out;
+}
+
+.content__box {
+    padding: 20px;
+}
+
+.content__box .content {
+    display: none;
+    animation: moving .5s ease;
+}
+
+.content__box .content.active {
+    display: block;
+    background: transparent;
+}
+
+.content__box .content h2 {
+    margin-bottom: 10px;
+}
+
+table {
     width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    grid-column: 2;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+th,
+td {
+    border: 1px solid #000;
+    text-align: center;
+    padding: 8px;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+@media (min-width: 481px) {
+    .product .wrapper {
+        --gutter: 60px
+    }
+
+    .product.dotgrid .image {
+        position: relative;
+        max-width: 500px;
+        width: 100%;
+        margin: 0 auto;
+        height: min-content;
+        overflow: hidden;
+    }
+
+    .product .outer__main {
+        width: calc(100% - 85px);
+        height: 100%;
+        margin: 0 0 0 85px;
+    }
+
+    .product .outer__thumb {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .custom-pagination {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .wrapper {
+        grid-template-columns: 100vw;
+        gap: 10px;
+    }
+
+    .summary {
+        width: 95%;
+        margin: 0 auto;
+    }
+}
+
+@media (min-width: 768px) {
+    .product.dotgrid .image {
+        max-width: 100%;
+        margin: 0;
+    }
+
+    .tab__box {
+        display: flex;
+    }
+
+    .tab__box .tab__btn {
+        font-family: "Kanit";
+        font-size: 1.4rem;
+        font-weight: 600;
+        color: #919191;
+        background: none;
+        border: none;
+        padding: 18px;
+        cursor: pointer;
+    }
+
+    .line {
+        position: absolute;
+        top: 59px;
+        left: 0px;
+        width: 90px;
+        height: 5px;
+        background-color: #000;
+        transition: all .3s ease-in-out;
+    }
+}
+
+@media (min-width: 1280px) {
+    .tab__box .tab__btn {
+        font-size: 1.6rem;
+    }
+}
+
+@media (min-width: 1400px) {
+    .wrapper {
+        grid-template-columns: 650px 1fr;
+    }
+
+    .product .outer__main {
+        width: 100%;
+        margin: 0;
+    }
+
+    .product .image .outer__thumb {
+        position: absolute;
+        top: 0;
+        left: -100px;
+        height: 100%;
+    }
+
+    .product.dotgrid .image {
+        overflow: unset;
+    }
+}
+
+@keyframes moving {
+    from {
+        transform: translateX(50px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
 }

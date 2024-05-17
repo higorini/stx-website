@@ -18,6 +18,7 @@
   <!-- CSS -->
   <link rel="stylesheet" href="./assets/css/main.css" />
   <link rel="stylesheet" href="./assets/css/product.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
 </head>
 
@@ -38,7 +39,7 @@
 
             <ul class="header__navlist">
               <li><a href="/">Home</a></li>
-              <li><a href="/">Loja</a></li>
+              <li><a href="./shop.html">Loja</a></li>
               <li><a href="/">Personalize</a></li>
               <li><a href="./assets/download/stx_catalogo.pdf" target="_blank">Catálogo</a></li>
               <li><a href="/">Contacto</a></li>
@@ -61,40 +62,120 @@
     </div>
   </div>
 
-  <div class="product">
-    <p>Produto</p>
-    <div class="product__main">
-      <div class="product__gallery">
-        <p>Galeria</p>
-      </div>
+  <div class="section">
+    <div class="container">
+      <div class="wrap">
+        <div class="product dotgrid">
+          <div class="wrapper">
+            <div class="image">
+              <div class="outer__main">
+                <div class="main__image swiper">
+                  <div class="wrap swiper-wrapper">
+                  </div>
+                </div>
+                <div class="custom-pagination">
+                  <div class="swiper-pagination"></div>
+                </div>
+              </div>
 
-      <div class="product__info">
-        <p>Info</p>
+              <div class="outer__thumb ob__cover">
+                <div class="thumbnail__image swiper">
+                  <div class="wrap swiper-wrapper small">
+                  </div>
+                </div>
+              </div>
+            </div>
 
-        <div class="product__buy">
-          <p>Encomenda</p>
+            <div class="summary">
+              <div class="entry">
+                <h1 class="title">Product Name</h1>
+                <div class="product__color">
+                  <span>Colors:</span>
+                  <div class="button__colors wrap">
+                  </div>
+                </div>
+
+                <div class="product__size">
+                  <span>Size:</span>
+                  <div class="wrap">
+                    <button class="size__button">U</button>
+                    <button class="size__button">XS</button>
+                    <button class="size__button">S</button>
+                    <button class="size__button">M</button>
+                    <button class="size__button">L</button>
+                    <button class="size__button">XL</button>
+                    <button class="size__button">XXL</button>
+                    <button class="size__button">3XL</button>
+                    <button class="size__button">4XL</button>
+                  </div>
+                </div>
+
+                <div class="product__description">
+                  <div class="description__box">
+                    <div class="description">
+                      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolores voluptate error accusamus
+                        pariatur veniam. Reiciendis, atque ad! Beatae impedit corrupti optio, at dolores aliquam itaque.
+                        Distinctio magni ratione repudiandae numquam maiores. Aperiam, obcaecati! Molestias quod quam
+                        eum suscipit? Consequatur, enim?</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="product__tabs">
+                  <div class="tab__box">
+                    <button class="tab__btn active">Detalhes</button>
+                    <button class="tab__btn">Guia de tamanho</button>
+                    <button class="tab__btn">Envio & Devoluções</button>
+                    <div class="line"></div>
+                  </div>
+
+                  <div class="content__box">
+                    <div class="content active">
+                      <ul class="product__details">
+                      </ul>
+                    </div>
+
+                    <div class="content">
+                      <table id="tabela">
+                        <thead>
+                          <tr>
+                            <th>EU</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr id="larguraRow">
+                            <td>Largura</td>
+                          </tr>
+                          <tr id="alturaRow">
+                            <td>Altura</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+
+                    <div class="content">
+                    </div>
+                  </div>
+                </div>
+
+                <div class="product__action">
+                  <div class="whatsapp__button">
+                    <button type="submit" class="primary__btn">ENCOMENDE</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
 
-        <div class="product__details">
-          <p>Detalhes</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="product__description">
-      <div class="description__image">
-        <p>Imagens</p>
-      </div>
-
-      <div class="description__text">
-        <p>Descrição</p>
+        <div class="product detail"></div>
       </div>
     </div>
   </div>
 
   <div class="fundo-branco">
     <h1>últimas novidades</h1>
-    <div class="slideshow__container show" id="slider2">
+    <div class="slideshow__container show" id="slider1">
       <div class="slideshow__wrapper">
         <button id="prev-slide" class="slide__button material-symbols-rounded">chevron_left</button>
         <div class="image__list">
@@ -154,6 +235,7 @@
     </div>
   </footer>
 
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="./assets/js/main.js"></script>
   <script src="./assets/js/mobile-navbar.js"></script>
   <script src="./assets/js/slideshow.js"></script>
