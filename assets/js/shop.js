@@ -63,17 +63,7 @@ function fillProductDetails(product) {
     });
   });
 
-  let allSizeButtons = document.querySelectorAll(".size__button");
-
-  allSizeButtons.forEach((button) => {
-    button.addEventListener("click", () => {
-      allSizeButtons.forEach((button) => {
-        button.classList.remove("selected");
-      });
-
-      button.classList.add("selected");
-    });
-  });
+  createSizeButtons(product);
 
   productDescriptionElement.innerText = product.description;
 
@@ -108,6 +98,45 @@ function fillProductDetails(product) {
   });
 
   disableMissingSizes(product);
+}
+
+function createSizeButtons(product) {
+  const sizeContainer = document.querySelector(".buttons__size");
+  sizeContainer.innerHTML = "";
+
+  const sizePattern = {
+    numeric: ["1-2", "3-4", "5-6", "7-8", "9-11", "12-14"],
+    letter: ["U", "XS", "S", "M", "L", "XL", "XXL", "3XL", "4XL"],
+  };
+
+  const isNumericSize = product.sizes.some((item) =>
+    sizePattern.numeric.includes(item.size)
+  );
+  const sizes = isNumericSize ? sizePattern.numeric : sizePattern.letter;
+
+  sizes.forEach((size) => {
+    const button = document.createElement("button");
+    button.classList.add("size__button");
+    button.textContent = size;
+
+    if (isNumericSize) {
+      button.style.fontSize = "1.6rem";
+    }
+
+    sizeContainer.appendChild(button);
+  });
+
+  let allSizeButtons = document.querySelectorAll(".size__button");
+
+  allSizeButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      allSizeButtons.forEach((button) => {
+        button.classList.remove("selected");
+      });
+
+      button.classList.add("selected");
+    });
+  });
 }
 
 function disableMissingSizes(product) {

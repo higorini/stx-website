@@ -9,7 +9,6 @@ let products = {
       category: "desporto",
       description:
         "Camisa polo esportiva de manga curta para homem com aba de três botões, costuras de contraste e fendas laterais.",
-      sizes: [["U", "XS", "S", "M", "L", "XL", "XXL", "3XL", "4XL"]],
       colors: [
         "black-silver",
         "red-navy",
@@ -54,7 +53,6 @@ let products = {
       category: "desporto",
       description:
         "Camisa polo esportiva de manga curta para mulher com aba de três botões, costuras de contraste e fendas laterais.",
-      sizes: [["U", "XS", "S", "M", "L", "XL", "XXL", "3XL", "4XL"]],
       colors: [
         "black-silver",
         "red-navy",
@@ -99,7 +97,6 @@ let products = {
       category: "desporto",
       description:
         "T-shirt de volta ao estilo das senhoras, ligeiramente ajustada. Etiqueta removível. Disponível em 6 cores e do tamanho S ao XXL",
-      sizes: [["U", "XS", "S", "M", "L", "XL", "XXL", "3XL", "4XL"]],
       colors: [
         "white",
         "black",
@@ -139,7 +136,6 @@ let products = {
       category: "desporto",
       description:
         "T-shirt desportiva para mulher com mangas curtas, ligeiramente ajustada, com costuras decorativas na frente, costas e mangas . Etiqueta removível. Disponível em 13 cores e do tamanho S ao XXL.",
-      sizes: [["U", "XS", "S", "M", "L", "XL", "XXL", "3XL", "4XL"]],
       colors: [
         "white",
         "black",
@@ -186,7 +182,6 @@ let products = {
       category: "desporto",
       description:
         "T-shirt desportiva para homem com mangas raglan curtas com costura decorativa em meia manga. Etiqueta removível. Disponível em 16 cores e do tamanho S ao XXL.",
-      sizes: [["U", "XS", "S", "M", "L", "XL", "XXL", "3XL", "4XL"]],
       colors: [
         "white",
         "black",
@@ -236,7 +231,6 @@ let products = {
       category: "desporto",
       description:
         "Camisa polo desportiva de manga curta pique para mulher, ligeiramente ajustada, com uma carcela de três botões, costura superior e aberturas laterais com contraste. Disponível em 7 cores e do tamanho S ao 3XL. Etiqueta removível",
-      sizes: [["U", "XS", "S", "M", "L", "XL", "XXL", "3XL", "4XL"]],
       colors: [
         "white",
         "black",
@@ -279,7 +273,6 @@ let products = {
       type: "homem",
       category: "trabalho",
       description: "Camisa de trabalho.",
-      sizes: [["U", "XS", "S", "M", "L", "XL", "XXL", "3XL", "4XL"]],
       colors: ["white", "black"],
       mainImage: `${imagePath}trabalho/shapeki/stxtshirt_shapekin_0.jpg`,
       imageDescription: "",
@@ -316,7 +309,6 @@ let products = {
       type: "mulher",
       category: "trabalho",
       description: "Camisa de trabalho.",
-      sizes: [["U", "XS", "S", "M", "L", "XL", "XXL", "3XL", "4XL"]],
       colors: ["white", "black"],
       mainImage: `${imagePath}trabalho/shlpekin/tshirt_shlpekin_0.jpg`,
       imageDescription: "",
@@ -354,7 +346,6 @@ let products = {
       category: "trabalho",
       description:
         "Camisa de trabalho para mulheres em tecido Poplin que se destaca pela sua resistência e toque sedoso (é um tecido menos grosso que o OXFORD). Camisa de trabalho para mulheres com mangas compridas ligeiramente ajustadas. Disponível em 7 cores e do tamanho S ao 3XL. Adequado para todas as estações do ano.",
-      sizes: [["U", "XS", "S", "M", "L", "XL", "XXL", "3XL", "4XL"]],
       colors: [
         "white",
         "black",
@@ -396,7 +387,6 @@ let products = {
       category: "trabalho",
       description:
         "Camisa casual com tecido de ganga. Manga comprimida. Colarinho sem botões. Com bolso. Fácil de engomar.",
-      sizes: [["U", "XS", "S", "M", "L", "XL", "XXL", "3XL", "4XL"]],
       colors: ["denin-vaquero"],
       mainImage: `${imagePath}trabalho/shltexas/stxtshirt_shltexas_0.jpg`,
       imageDescription: "",
@@ -420,7 +410,6 @@ let products = {
       category: "trabalho",
       description:
         "Casaco Softshell para homens, com tecido de lã interna no mesmo tom. Tem um fecho completo, 3 bolsos laterais com fecho e 3 camadas com membranas respiráveis. Um workwearcomplement perfeito quando se trabalha ao ar livre ou atividades ao ar livre. Disponível em 7 cores e do tamanho S ao 4XL.",
-      sizes: [["U", "XS", "S", "M", "L", "XL", "XXL", "3XL", "4XL"]],
       colors: [
         "white",
         "black",
@@ -464,7 +453,6 @@ let products = {
       category: "trabalho",
       description:
         "Casaco Softshell para homens, com tecido de lã interna no mesmo tom. Tem um fecho completo, 3 bolsos laterais com fecho e 3 camadas com membranas respiráveis. Um workwearcomplement perfeito quando se trabalha ao ar livre ou atividades ao ar livre. Disponível em 7 cores e do tamanho S ao 4XL.",
-      sizes: [["U", "XS", "S", "M", "L", "XL", "XXL", "3XL", "4XL"]],
       colors: [
         "white",
         "black",
@@ -508,7 +496,6 @@ let products = {
       category: "trabalho",
       description:
         "Casaco Softshell para homens, com tecido de lã interna no mesmo tom. Tem um fecho completo, 3 bolsos laterais com fecho e 3 camadas com membranas respiráveis. Um workwearcomplement perfeito quando se trabalha ao ar livre ou atividades ao ar livre. Disponível em 7 cores e do tamanho S ao 4XL.",
-      sizes: [["U", "XS", "S", "M", "L", "XL", "XXL", "3XL", "4XL"]],
       colors: [
         "white",
         "black",
@@ -552,7 +539,6 @@ let products = {
       category: "trabalho",
       description:
         "Blusa medica unisex. Decote em V um bolso no peito no lado esquerdo dos bolsos a frente na parte inferior. dupla costura na abertura do bolso. aberturas laterais. Meia lua no pescoço",
-      sizes: [["U", "XS", "S", "M", "L", "XL", "XXL", "3XL", "4XL"]],
       colors: ["white", "azzure", "emerald"],
       mainImage: `${imagePath}trabalho/wkoport/tshirt_wkoporto_0.jpg`,
       imageDescription: "",
@@ -581,7 +567,6 @@ let products = {
       category: "trabalho",
       description:
         "Blusa medica unisex. Decote em V um bolso no peito no lado esquerdo dos bolsos a frente na parte inferior. dupla costura na abertura do bolso. aberturas laterais. Meia lua no pescoço",
-      sizes: [["U", "XS", "S", "M", "L", "XL", "XXL", "3XL", "4XL"]],
       colors: ["white", "azzure", "emerald"],
       mainImage: `${imagePath}trabalho/wkoport/tshirt_wkoporto_0.jpg`,
       imageDescription: "",
@@ -610,7 +595,6 @@ let products = {
       category: "trabalho",
       description:
         "Avental de adulto unisex. Com alça no pescoço ajustavel e fivela deslizante em plastico. Duas alças na cintura. Um bolso grande à frente",
-      sizes: [["U", "XS", "S", "M", "L", "XL", "XXL", "3XL", "4XL"]],
       colors: [
         "white",
         "black",
@@ -648,7 +632,6 @@ let products = {
       category: "trabalho",
       description:
         "Bata de homem. Decote em V. Bolso no peito no lado esquerdo e dos bolsos a frente na parte inferior. 5 botões a frente à cor, cinto preso nas costas",
-      sizes: [["U", "XS", "S", "M", "L", "XL", "XXL", "3XL", "4XL"]],
       colors: ["white", "azzure", "emerald"],
       mainImage: `${imagePath}trabalho/wkrome/stxtshirt_wkrome_0.jpg`,
       imageDescription: "",
@@ -676,7 +659,6 @@ let products = {
       category: "trabalho",
       description:
         "Avental mini unisex. De adulto. Duas alças na cintura 3 bolsos largos e 2 estreitos.",
-      sizes: [["U", "XS", "S", "M", "L", "XL", "XXL", "3XL", "4XL"]],
       colors: ["white", "black", "denin-vaquero"],
       mainImage: `${imagePath}/trabalho/wkvenic/stxtshirt_wkvenice_0.jpg`,
       imageDescription: "",
@@ -703,7 +685,6 @@ let products = {
       category: "trabalho",
       description:
         "Avental mini unisex. De adulto. Duas alças na cintura 3 bolsos largos e 2 estreitos.",
-      sizes: [["U", "XS", "S", "M", "L", "XL", "XXL", "3XL", "4XL"]],
       colors: ["white", "black", "denin-vaquero"],
       mainImage: `${imagePath}/trabalho/wkvenic/stxtshirt_wkvenice_0.jpg`,
       imageDescription: "",
@@ -730,7 +711,6 @@ let products = {
       category: "trabalho",
       description:
         "Avental medio unisex de adulto duas alças na cintura. Bolsos canguru e bolso duplo.",
-      sizes: [["U", "XS", "S", "M", "L", "XL", "XXL", "3XL", "4XL"]],
       colors: [
         "white",
         "black",
@@ -765,7 +745,6 @@ let products = {
       category: "trabalho",
       description:
         "Avental medio unisex de adulto duas alças na cintura. Bolsos canguru e bolso duplo.",
-      sizes: [["U", "XS", "S", "M", "L", "XL", "XXL", "3XL", "4XL"]],
       colors: [
         "white",
         "black",
@@ -792,6 +771,197 @@ let products = {
         "Gramatura: 180 g/m². approx",
       ],
       sizes: [{ size: "U", width: "91cm", height: "47,5cm" }],
+    },
+    {
+      id: 22,
+      productName: "Flra300",
+      type: "homem",
+      category: "inverno",
+      description:
+        "Casaco polar para homem com fecho completo, bolsos laterais, punhos elásticos e cordão com rolhas, 100% poliéster. Tratamento anti-borboto. Ideal para trabalho ao ar livre, montanha ou atividades ao ar livre, pois proporciona uma boa proteção contra o frio. Disponível em 16 cores de tamanho XS a 3X.",
+      colors: [
+        "white",
+        "black",
+        "red",
+        "navy",
+        "royal-blue",
+        "aqua",
+        "bottle-green",
+        "burgundy",
+        "forest-green",
+        "graphite",
+        "grey-melange",
+        "kelly-green",
+        "lime",
+        "orange",
+        "purple",
+        "sand",
+        "sky-blue",
+        "off-white",
+      ],
+      mainImage: `${imagePath}inverno/flra/stxtshirt_flra300_0.jpg`,
+      imageDescription: "",
+      imageGallery: [
+        `${imagePath}inverno/flra/stxtshirt_flra300_0.jpg`,
+        `${imagePath}inverno/flra/tshirt_flra300_wh.jpg`,
+        `${imagePath}inverno/flra/tshirt_flra300_wh_side.jpg`,
+        `${imagePath}inverno/flra/tshirt_flra300_wh_back.jpg`,
+      ],
+      badges: [],
+      details: [
+        "Fecho completo.",
+        "Bolsos laterais.",
+        "Tratamento anti-borboto.",
+        "Cabo de ajuste com paradas.",
+        "Punhos elásticos.",
+        "300 g/m² approx.",
+        "100% Poliéste",
+      ],
+      sizes: [
+        { size: "XS", width: "56cm", height: "64cm" },
+        { size: "S", width: "58cm", height: "66cm" },
+        { size: "M", width: "60cm", height: "68cm" },
+        { size: "L", width: "62cm", height: "70cm" },
+        { size: "XL", width: "64cm", height: "73cm" },
+        { size: "XXL", width: "66cm", height: "75cm" },
+        { size: "3XL", width: "68,5cm", height: "80cm" },
+      ],
+    },
+    {
+      id: 23,
+      productName: "Flra300",
+      type: "mulher",
+      category: "inverno",
+      description:
+        "Casaco polar feminino com fecho completo, bolsos laterais com fecho, cordão com punhos e punhos elásticos, 100% poliéster. Tratamento anti-borboto. Ideal para trabalho ao ar livre, montanha ou atividades ao ar livre, pois proporciona uma boa proteção contra o frio. Disponível em 17 cores, do tamanho XS ao XXL.",
+      colors: [
+        "white",
+        "black",
+        "red",
+        "navy",
+        "royal-blue",
+        "aqua",
+        "bottle-green",
+        "burgundy",
+        "forest-green",
+        "graphite",
+        "grey-melange",
+        "kelly-green",
+        "lime",
+        "orange",
+        "purple",
+        "sand",
+        "sky-blue",
+        "off-white",
+      ],
+      mainImage: `${imagePath}inverno/flrl/stxtshirt_flrl300_0.jpg`,
+      imageDescription: "",
+      imageGallery: [
+        `${imagePath}inverno/flrl/stxtshirt_flrl300_0.jpg`,
+        `${imagePath}inverno/flrl/tshirt_flrl300_wh.jpg`,
+        `${imagePath}inverno/flrl/tshirt_flrl300_wh_side.jpg`,
+        `${imagePath}inverno/flrl/tshirt_flrl300_wh_back.jpg`,
+      ],
+      badges: [],
+      details: [
+        "Fecho completo.",
+        "Bolsos laterais com fecho.",
+        "Corte cintado.",
+        "Tratamento anti-borboto.",
+        "Cabo de ajuste com paradas.",
+        "Punhos elásticos.",
+        "300 g/m² approx.",
+        "100% Poliéster",
+      ],
+      sizes: [
+        { size: "XS", width: "45cm", height: "59,5cm" },
+        { size: "S", width: "47,5cm", height: "61,5cm" },
+        { size: "M", width: "50cm", height: "63,5cm" },
+        { size: "L", width: "52,5cm", height: "65,5cm" },
+        { size: "XL", width: "55cm", height: "67,5cm" },
+        { size: "XXL", width: "57,5cm", height: "69,5cm" },
+      ],
+    },
+    {
+      id: 24,
+      productName: "SW Hoodeco",
+      type: "homem",
+      category: "inverno",
+      description:
+        "Sweatshirt com capuz unisex com capa de zíper completa e bolso canguru. Disponível em 7 cores e do tamanho XS ao 3XL",
+      colors: [
+        "white",
+        "black",
+        "navy",
+        "grey-melange",
+        "dark-grey-melange",
+        "steel-blue",
+        "buttercream",
+        "eucalyptus",
+      ],
+      mainImage: `${imagePath}inverno/swhood/stxtshirt_swhoodeco_0.jpg`,
+      imageDescription: "",
+      imageGallery: [
+        `${imagePath}inverno/swhood/stxtshirt_swhoodeco_0.jpg`,
+        `${imagePath}inverno/swhood/tshirt_swhoodeco_wh.jpg`,
+        `${imagePath}inverno/swhood/tshirt_swhoodeco_wh_side.jpg`,
+        `${imagePath}inverno/swhood/tshirt_swhoodeco_wh_back.jpg`,
+      ],
+      badges: [],
+      details: [
+        "Fecho completo.",
+        "Bolsos laterais com fecho.",
+        "Corte cintado.",
+        "Tratamento anti-borboto.",
+        "Cabo de ajuste com paradas.",
+        "Punhos elásticos.",
+        "300 g/m² approx.",
+        "100% Poliéster",
+      ],
+      sizes: [
+        { size: "XS", width: "52cm", height: "67cm" },
+        { size: "S", width: "54cm", height: "69cm" },
+        { size: "M", width: "56cm", height: "70cm" },
+        { size: "L", width: "58cm", height: "71cm" },
+        { size: "XL", width: "60cm", height: "72cm" },
+        { size: "XXL", width: "62cm", height: "74cm" },
+        { size: "3XL", width: "64cm", height: "76cm" },
+        { size: "4XL", width: "66cm", height: "78cm" },
+      ],
+    },
+    {
+      id: 25,
+      productName: "SW Kangaroo240",
+      type: "infantil",
+      category: "inverno",
+      description: "Suéter com capuz kids unisex com bolso canguru.",
+      colors: ["white", "black", "navy", "royal-blue"],
+      mainImage: `${imagePath}inverno/swkkng/stxtshirt_swrkkng240_0.jpg`,
+      imageDescription: "",
+      imageGallery: [
+        `${imagePath}inverno/swkkng/stxtshirt_swrkkng240_0.jpg`,
+        `${imagePath}inverno/swkkng/tshirt_swrkkng240_wh.jpg`,
+        `${imagePath}inverno/swkkng/tshirt_swrkkng240_wh_side.jpg`,
+        `${imagePath}inverno/swkkng/tshirt_swrkkng240_wh_back.jpg`,
+      ],
+      badges: [],
+      details: [
+        "Hooded sweatshirt.",
+        "Cordão de aperto à cor.",
+        "Bolso marsupial.",
+        "Canelado em elastano 2x1 nos punhos e parte inferior.",
+        "235/240 g/m² approx.",
+        "60% Algodão",
+        "40% Poliéster",
+      ],
+      sizes: [
+        { size: "1-2", width: "52cm", height: "67cm" },
+        { size: "3-4", width: "54cm", height: "69cm" },
+        { size: "5-6", width: "56cm", height: "70cm" },
+        { size: "7-8", width: "58cm", height: "71cm" },
+        { size: "9-11", width: "60cm", height: "72cm" },
+        { size: "12-14", width: "62cm", height: "74cm" },
+      ],
     },
   ],
 };

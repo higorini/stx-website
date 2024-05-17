@@ -33,10 +33,19 @@
     --raspberry: #af0060;
     --zinc: #898a8c;
     --cardinal: #5f253a;
-}
-
-.section {
-    background-color: #e0e1dc;
+    --burgundy: #502a3a;
+    --forest-green: #4e4a34;
+    --grey-melange: #706963;
+    --kelly-green: #018657;
+    --lime: #7ab120;
+    --orange: #ff681e;
+    --purple: #2e1a44;
+    --sand: #e1b585;
+    --off-white: #f3efe1;
+    --dark-grey-melange: #777375;
+    --steel-blue: #6a727c;
+    --buttercream: #faf0e7;
+    --eucalyptus: #6ab496;
 }
 
 .container {
@@ -153,7 +162,7 @@
 
 .summary .product__size button {
     font-family: "Kanit", sans-serif;
-    font-size: 2rem;
+    font-size: 1.8rem;
     line-height: 44px;
 }
 
@@ -188,7 +197,6 @@
     width: 100%;
     background-color: white;
     padding: 15px;
-    box-shadow: 0 2px 16px rgba(0, 0, 0, .1);
 }
 
 .tab__box {
