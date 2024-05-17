@@ -6,9 +6,11 @@ function fillProductDetails(product) {
   let buttonColors = document.querySelector(".button__colors");
   let productDescriptionElement = document.querySelector(".description p");
   let productDetailsList = document.querySelector(".product__details");
+  let productSub = document.querySelector(".product__sub");
 
   // Product info
   productNameElement.innerText = product.productName;
+  productSub.innerHTML = capitalizeLetter(product.category);
 
   let imageGallery = product.imageGallery;
 
@@ -98,6 +100,10 @@ function fillProductDetails(product) {
   });
 
   disableMissingSizes(product);
+}
+
+function capitalizeLetter(string) {
+  return string.charAt(0).toUpperCase() + string.slice(1);
 }
 
 function createSizeButtons(product) {
@@ -220,7 +226,7 @@ tabs.forEach((tab, index) => {
     });
     tab.classList.add("active");
 
-    if (window.innerWidth >= 820) {
+    if (window.innerWidth >= 768) {
       let line = document.querySelector(".line");
       line.style.width = e.target.offsetWidth + "px";
       line.style.left = e.target.offsetLeft + "px";
@@ -242,7 +248,7 @@ window.addEventListener("resize", () => {
   tabs.forEach((tab, index) => {
     if (tab.classList.contains("active")) {
       const line = document.querySelector(".line");
-      if (window.innerWidth >= 820) {
+      if (window.innerWidth >= 768) {
         line.style.width = tab.offsetWidth + "px";
         line.style.left = tab.offsetLeft + "px";
       } else {

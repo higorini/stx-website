@@ -40,6 +40,8 @@ function filterProduct(value) {
       }
     }
   });
+
+  hideProduct();
 }
 
 function filterType(value) {
@@ -62,6 +64,8 @@ function filterType(value) {
       element.classList.add("hideType");
     }
   });
+
+  hideProduct();
 }
 
 function showProduct(product) {
@@ -89,6 +93,8 @@ function showProduct(product) {
   });
   montraAtual.appendChild(productButton);
 
+  moveMontraAtual();
+
   montraAtual.classList.remove("not");
 
   let position = montraAtual.getBoundingClientRect();
@@ -99,7 +105,39 @@ function showProduct(product) {
   });
 }
 
+function moveMontraAtual() {
+  let screenWidth = window.innerWidth;
+
+  if (screenWidth < 768) {
+    let montraAtual = document.querySelector(".montra__atual");
+    let divDestino = document.querySelector(".montra__wrapper");
+    let firstChild = divDestino.firstElementChild;
+
+    if (montraAtual && divDestino) {
+      divDestino.insertBefore(montraAtual, firstChild);
+    }
+  } else {
+    let montraAtual = document.querySelector(".montra__atual");
+    let divOriginal = document.querySelector(".montra__interna");
+    let firstChild = divOriginal.firstElementChild;
+
+    if (montraAtual && divOriginal) {
+      divOriginal.insertBefore(montraAtual, firstChild);
+    }
+  }
+}
+
+function hideProduct() {
+  let montraAtual = document.querySelector(".montra__atual");
+
+  montraAtual.innerHTML = "";
+
+  montraAtual.classList.add("not");
+}
+
 window.onload = () => {
   filterType("homem");
   filterProduct("todos");
 };
+
+window.addEventListener("resize", moveMontraAtual);
