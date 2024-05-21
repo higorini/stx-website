@@ -7,10 +7,12 @@ function fillProductDetails(product) {
   let productDescriptionElement = document.querySelector(".description p");
   let productDetailsList = document.querySelector(".product__details");
   let productSub = document.querySelector(".product__sub");
+  let productCategory = document.querySelector(".product__category");
 
   // Product info
   productNameElement.innerText = product.productName;
   productSub.innerHTML = capitalizeLetter(product.category);
+  productCategory.innerHTML = capitalizeLetter(product.type);
 
   let imageGallery = product.imageGallery;
 
@@ -52,6 +54,8 @@ function fillProductDetails(product) {
 
     buttonColors.appendChild(button);
   });
+
+  addColorNameAttribute();
 
   let allButtonColors = document.querySelectorAll(".color__button");
 
@@ -102,6 +106,26 @@ function fillProductDetails(product) {
   disableMissingSizes(product);
 }
 
+function addColorNameAttribute() {
+  for (let product of products.data) {
+    for (let color of product.colors) {
+      const formattedColor = formatColorName(color);
+      const button = document.querySelector(
+        `button.color__button[style*="${color}"]`
+      );
+      if (button) {
+        button.setAttribute("data-color-name", formattedColor);
+      }
+    }
+  }
+}
+
+function formatColorName(color) {
+  return color
+    .replace(/-/g, " ")
+    .replace(/\b\w/g, (char) => char.toUpperCase());
+}
+
 function capitalizeLetter(string) {
   return string.charAt(0).toUpperCase() + string.slice(1);
 }
@@ -123,6 +147,7 @@ function createSizeButtons(product) {
   sizes.forEach((size) => {
     const button = document.createElement("button");
     button.classList.add("size__button");
+    button.setAttribute("data-size", size);
     button.textContent = size;
 
     if (isNumericSize) {
