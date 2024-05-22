@@ -136,7 +136,19 @@ function hideProduct() {
 }
 
 window.onload = () => {
-  filterType("homem");
+  let urlParams = new URLSearchParams(window.location.search);
+  let type = urlParams.get("type");
+
+  if (!type || (type !== "mulher" && type !== "infantil")) {
+    type = "homem";
+    window.history.replaceState(
+      {},
+      "",
+      `${window.location.pathname}?type=${type}`
+    );
+  }
+
+  filterType(type);
   filterProduct("todos");
 };
 

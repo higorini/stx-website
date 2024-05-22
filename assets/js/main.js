@@ -49,3 +49,7 @@ window.addEventListener("scroll", function () {
     header.classList.remove("on__scroll");
   }
 });
+
+function redirectToPage(type) {
+  window.location.href = "shop.html?type=" + type;
+}
