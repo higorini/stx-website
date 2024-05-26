@@ -298,17 +298,6 @@ header {
   transition: all 2s ease;
 }
 
-.vitrine__init {
-  z-index: 1;
-  opacity: 0;
-  transition: opacity 2s ease;
-}
-
-.vitrine__init.show {
-  opacity: 1;
-  transition: opacity 2s ease;
-}
-
 .vitrine__item--1 {
   grid-column-start: 13;
   grid-column-end: 10;
@@ -374,6 +363,12 @@ header {
   height: 100%;
   object-fit: cover;
   display: block;
+  transition: opacity 2s ease-in-out;
+}
+
+.invisible {
+  opacity: 0;
+  transition: opacity 2s ease-in-out;
 }
 
 .banner__container {
