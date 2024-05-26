@@ -1,77 +1,81 @@
-let path = "./assets/images/Vitrine/";
-
-const groupedImages = vitrineHome.data.reduce((acc, image) => {
-  const baseName = image.imageName.split("-")[0];
-  if (!acc[baseName]) {
-    acc[baseName] = [];
-  }
-  acc[baseName].push(image.imageName);
-  return acc;
-}, {});
-
 const container = document.querySelector(".vitrine__main");
 
-let count = 0;
+let path = "./assets/images/Vitrine/";
 
-Object.keys(groupedImages).forEach((baseName) => {
-  const figure = document.createElement("figure");
-  const img = document.createElement("img");
+function shuffleArray(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+  return array;
+}
 
-  figure.classList.add("vitrine__item", `vitrine__item--${baseName}`);
+function createImageDivs() {
+  const groups = {};
+  let numGroups = 0;
 
-  img.classList.add("vitrine__img");
-  img.setAttribute(
-    "src",
-    path + groupedImages[baseName].find((name) => name.includes("-A"))
-  );
+  vitrineHome.data.forEach((item) => {
+    const group = parseInt(item.imageName.split("-")[0]);
+    if (!groups[group]) {
+      groups[group] = [];
+      numGroups++;
+    }
+    groups[group].push(item);
+  });
 
-  figure.appendChild(img);
-  container.appendChild(figure);
+  const shuffledGroups = shuffleArray(Object.keys(groups));
 
-  startIndividualAlternation(img, baseName, count);
-  count++;
-});
+  for (let i = 0; i < numGroups; i++) {
+    const group = groups[shuffledGroups[i]];
+    group.forEach((item) => {
+      const figure = document.createElement("figure");
+      figure.classList.add("vitrine__item");
+      const imageName = parseInt(item.imageName.split("-")[0]);
+      figure.classList.add(`vitrine__item--${imageName}`);
 
-function toggleImage(img, imgBaseName) {
-  const imgName = img.getAttribute("src").split("/").pop();
+      const img = document.createElement("img");
+      img.src = `${path}${item.imageName}`;
+      img.alt = item.imageName.includes("-B") ? "Image B" : "Image A";
+      img.classList.add("vitrine__img");
+      figure.appendChild(img);
+      container.appendChild(figure);
 
-  const hasA = groupedImages[imgBaseName].includes(`${imgBaseName}-A.jpg`);
-  const hasB = groupedImages[imgBaseName].includes(`${imgBaseName}-B.jpg`);
-
-  if (hasA && hasB) {
-    img.classList.add("invisible");
-
-    img.addEventListener("transitionend", function onTransitionEnd() {
-      img.removeEventListener("transitionend", onTransitionEnd);
-
-      if (imgName.includes("-A")) {
-        img.setAttribute("src", path + imgName.replace("-A", "-B"));
-      } else if (imgName.includes("-B")) {
-        img.setAttribute("src", path + imgName.replace("-B", "-A"));
+      if (!item.imageName.includes("-B")) {
+        img.classList.add("ignore");
       }
-
-      setTimeout(() => {
-        img.classList.remove("invisible");
-        startIndividualAlternation(img, imgBaseName, img.dataset.groupIndex);
-      }, 2000);
     });
   }
 }
 
-function startIndividualAlternation(img, imgBaseName, groupIndex) {
-  const visibleInterval =
-    5500 +
-    groupIndex * 500 -
-    Math.floor(Math.random() * (4000 - 2000 + 1)) +
-    2000;
-
-  setTimeout(() => {
-    toggleImage(img, imgBaseName);
-  }, visibleInterval);
+function toggleImageClasses(group) {
+  const images = group.querySelectorAll(".vitrine__img:not(.ignore)");
+  images.forEach((image) => {
+    image.classList.toggle("invisible");
+  });
 }
 
-document.querySelectorAll("img.vitrine__img").forEach((img, index) => {
-  const imgBaseName = img.getAttribute("src").split("/").pop().split("-")[0];
-  img.dataset.groupIndex = index;
-  startIndividualAlternation(img, imgBaseName, index);
-});
+function alternateGroups() {
+  const groups = document.querySelectorAll(".vitrine__item");
+  let totalWaitTime = 0;
+
+  groups.forEach((group, index) => {
+    const images = group.querySelectorAll(".vitrine__img:not(.ignore)");
+    const waitTime = index * 1200 + images.length * 200;
+
+    setTimeout(() => {
+      toggleImageClasses(group);
+    }, waitTime);
+
+    totalWaitTime = Math.max(waitTime, totalWaitTime);
+  });
+
+  setTimeout(
+    () => {
+      alternateGroups();
+    },
+    totalWaitTime + 2000 + Math.floor(Math.random() * (6000 - 3000 + 1)) + 3000
+  );
+}
+
+createImageDivs();
+alternateGroups();
