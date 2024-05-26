@@ -60,7 +60,7 @@ function alternateGroups() {
 
   groups.forEach((group, index) => {
     const images = group.querySelectorAll(".vitrine__img:not(.ignore)");
-    const waitTime = index * 1200 + images.length * 200;
+    const waitTime = index * 3000 + images.length * 200;
 
     setTimeout(() => {
       toggleImageClasses(group);
@@ -73,7 +73,7 @@ function alternateGroups() {
     () => {
       alternateGroups();
     },
-    totalWaitTime + 2000 + Math.floor(Math.random() * (6000 - 3000 + 1)) + 3000
+    totalWaitTime + 3000 + Math.floor(Math.random() * (4000 - 2000 + 1)) + 2000
   );
 }
 
