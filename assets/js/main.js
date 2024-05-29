@@ -22,6 +22,11 @@ const showElements = document.querySelectorAll(".show");
 hiddenElements.forEach((el) => observer.observe(el));
 showElements.forEach((el) => observerShow.observe(el));
 
+showElements.forEach((el) => {
+  const delay = Math.random() * (0.6 - 0.3) + 0.3;
+  el.style.transitionDelay = `${delay}s`;
+});
+
 let lastScrollPosition = window.pageYOffset;
 
 window.addEventListener("scroll", function () {

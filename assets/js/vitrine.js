@@ -30,6 +30,8 @@ function createImageDivs() {
     group.forEach((item) => {
       const figure = document.createElement("figure");
       figure.classList.add("vitrine__item");
+      figure.classList.add("show");
+      figure.classList.add("up");
       const imageName = parseInt(item.imageName.split("-")[0]);
       figure.classList.add(`vitrine__item--${imageName}`);
 
@@ -60,7 +62,7 @@ function alternateGroups() {
 
   groups.forEach((group, index) => {
     const images = group.querySelectorAll(".vitrine__img:not(.ignore)");
-    const waitTime = index * 3000 + images.length * 200;
+    const waitTime = index * 1000 + images.length * 200;
 
     setTimeout(() => {
       toggleImageClasses(group);
@@ -73,7 +75,7 @@ function alternateGroups() {
     () => {
       alternateGroups();
     },
-    totalWaitTime + 3000 + Math.floor(Math.random() * (4000 - 2000 + 1)) + 2000
+    totalWaitTime + 1000 + Math.floor(Math.random() * (2000 - 1000 + 1)) + 1000
   );
 }
 

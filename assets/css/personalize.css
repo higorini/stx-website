@@ -1,0 +1,88 @@
+.personalize__main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 4rem 0;
+}
+
+.personalize__container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 0 1rem;
+}
+
+.personalize__header {
+  padding: 1rem 0;
+}
+
+.personalize__header h1 {
+  line-height: 2rem;
+  font-size: 5rem;
+}
+
+.personalize__header h2 {
+  font-size: 2.5rem;
+}
+
+.cta__header {
+  width: 100%;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+
+  background-image: url("../images/slides/10.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+
+  margin-bottom: 4rem;
+}
+
+.cta__header p {
+  width: 100%;
+  font-size: 2.5rem;
+  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8);
+}
+
+.cta__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.cta__button button {
+  width: 100%;
+  padding: 0.5rem;
+
+  background-color: transparent;
+
+  font-family: "Kanit", sans-serif;
+  text-transform: uppercase;
+  font-size: 3rem;
+  font-weight: 600;
+}
+
+.cta__button button:hover {
+  background-color: #000;
+  color: #fff;
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .cta__header {
+    background-position: right top;
+  }
+
+  .cta__header p {
+    width: 60%;
+    font-size: 2.5rem;
+  }
+
+  .cta__button button {
+    font-size: 4rem;
+  }
+}

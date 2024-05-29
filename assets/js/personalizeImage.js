@@ -13,6 +13,9 @@ let vitrineHome = {
       imageName: "3-A.jpg",
     },
     {
+      imageName: "3-B.jpg",
+    },
+    {
       imageName: "4-A.jpg",
     },
     {
@@ -26,6 +29,9 @@ let vitrineHome = {
     },
     {
       imageName: "7-A.jpg",
+    },
+    {
+      imageName: "7-B.jpg",
     },
     {
       imageName: "8-A.jpg",
