@@ -88,7 +88,7 @@
   grid-column-start: 1;
   grid-column-end: 5;
   grid-row-start: 10;
-  grid-row-end: 16;
+  grid-row-end: 17;
 }
 
 .vitrine__item--3 {
@@ -102,14 +102,14 @@
   grid-column-start: 10;
   grid-column-end: 13;
   grid-row-start: 1;
-  grid-row-end: 7;
+  grid-row-end: 6;
 }
 
 .vitrine__item--5 {
   grid-column-start: 10;
   grid-column-end: 13;
-  grid-row-start: 7;
-  grid-row-end: 13;
+  grid-row-start: 6;
+  grid-row-end: 12;
 }
 
 .vitrine__item--7 {
@@ -129,14 +129,14 @@
 .vitrine__item--9 {
   grid-column-start: 1;
   grid-column-end: 5;
-  grid-row-start: 16;
+  grid-row-start: 17;
   grid-row-end: 20;
 }
 
 .vitrine__item--10 {
   grid-column-start: 10;
   grid-column-end: 13;
-  grid-row-start: 13;
+  grid-row-start: 12;
   grid-row-end: 17;
 }
 
