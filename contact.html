@@ -20,7 +20,7 @@
     <!-- CSS -->
     <link rel="stylesheet" href="./assets/css/main.css" />
     <link rel="stylesheet" href="./assets/css/shop.css" />
-    <link rel="stylesheet" href="./assets/css/personalize.css" />
+    <link rel="stylesheet" href="./assets/css/contact.css" />
     <script
       src="https://static.elfsight.com/platform/platform.js"
       data-use-service-core
@@ -71,46 +71,80 @@
 
     <div class="shop__hero">
       <div class="shop__hero-container">
-        <span>Home / Personalize</span>
-        <h1>Personalize</h1>
+        <span>Home / Contacto</span>
+        <h1>Contacto</h1>
       </div>
     </div>
 
-    <div class="vitrine">
-      <div class="vitrine__header">
-        <h1>
-          Acreditamos que os espaços em que vivemos devem inspirar e fazer-nos
-          sentir felizes e especiais. Por isso, criamos candeeiros com
-          significado, personalizados à medida de cada um e produzidos de forma
-          original, para enriquecer e transformar os espaços através do seu
-          design único.
-        </h1>
-      </div>
+    <div class="contact__container">
+      <div class="contact__wrapper">
+        <div class="contact__form">
+          <form>
+            <input
+              type="text"
+              id="nome"
+              name="nome"
+              placeholder="Nome"
+              required
+            /><br /><br />
 
-      <div class="vitrine__container">
-        <div class="vitrine__main"></div>
-      </div>
-    </div>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Email"
+              required
+            /><br /><br />
 
-    <div class="personalize__main">
-      <div class="personalize__container">
-        <div class="personalize__header">
-          <h1>Personalize!</h1>
-          <h2>Crie já sua t-shirt!</h2>
+            <input
+              type="tel"
+              id="telefone"
+              name="telefone"
+              placeholder="Telefone"
+              required
+            /><br /><br />
+
+            <textarea
+              id="mensagem"
+              name="mensagem"
+              rows="4"
+              cols="50"
+              placeholder="Mensagem"
+              required
+            ></textarea
+            ><br /><br />
+
+            <button>Enviar</button>
+          </form>
         </div>
 
-        <div class="personalize__cta">
-          <div class="cta__header">
-            <p>
-              Pariatur amet exercitation cupidatat ad. Est aliqua officia Lorem
-              ullamco veniam aute eiusmod pariatur laboris dolore ea amet
-              voluptate. Lorem dolor sint ullamco enim quis excepteur non nulla
-              dolor magna do. Mollit reprehenderit anim nostrud magna sint.
-            </p>
+        <div class="contact__info">
+          <div class="contact__redes">
+            <h1>CONVERSE CONOSCO</h1>
+            <p>pelos nossos canais</p>
+            <div>
+              <a
+                href="https://api.whatsapp.com/send?phone=351910140715&amp;text=Bem%20Vindo!%20Como%20podemos%20ajudar?"
+              >
+                <img src="./assets//images/contacto/whats-app-contacto.png" />
+              </a>
+
+              <a href="https://www.messenger.com/t/silvalightdesign/">
+                <img src="./assets//images/contacto/messenger-contacto.png" />
+              </a>
+            </div>
           </div>
 
-          <div class="cta__button">
-            <button onclick="contactOnWhatsapp()">Personalize</button>
+          <div class="contact__address">
+            <h1>
+              Visite nosso Showroom
+              <hr width="100%" />
+            </h1>
+            <p>
+              Rua Adriano Pinto Basto, Centro Comercial Vinova, Loja 2, V. N.
+              Famalicão, Portugal<br />
+              Telefone: +351 910 140 715 | Email: info@silvalight.pt
+            </p>
           </div>
         </div>
       </div>
@@ -122,12 +156,12 @@
           <div class="footer__header">
             <h2>LOREM IPSUM</h2>
             <h1>LOREM IPSUM</h1>
-            <span>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
+            <span
+              >Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
               tempore, maiores blanditiis harum fuga in aliquid cupiditate
               dolores assumenda debitis cum officiis sed velit ipsam, magnam
-              nulla est ipsum saepe!
-            </span>
+              nulla est ipsum saepe!</span
+            >
           </div>
 
           <div class="footer__social">
@@ -165,9 +199,10 @@
       </div>
     </footer>
 
-    <script src="./assets/js/personalizeImage.js"></script>
-    <script src="./assets/js/personalize.js"></script>
     <script src="./assets/js/main.js"></script>
     <script src="./assets/js/mobile-navbar.js"></script>
+    <script src="./assets/js/slideshow.js"></script>
+    <script src="./assets/js/product.js"></script>
+    <script src="./assets/js/products.js"></script>
   </body>
 </html>

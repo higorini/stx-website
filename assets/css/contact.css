@@ -1,0 +1,75 @@
+.contact__container {
+    margin: 4rem 0;
+}
+
+.contact__wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+form {
+    padding: 1rem;
+}
+
+input, textarea {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #000;
+    font-family: "Kanit", sans-serif;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+}
+
+button {
+    width: 100%;
+    border: 1px solid #000;
+    background-color: transparent;
+    padding: 1rem;
+    font-family: "Kanit", sans-serif;
+}
+
+button:hover {
+    cursor: pointer;
+    color: #fff;
+    background-color: #000;
+}
+
+.contact__redes, 
+.contact__address {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    gap: 1rem;
+}
+
+.contact__address p {
+    font-size: 1.5rem;
+}
+
+
+@media (min-width: 768px) {
+    .contact__wrapper {
+        flex-direction: row;
+        gap: 0;
+    }
+
+    .contact__form {
+        width: 60%;
+    }
+
+    .contact__info {
+        width: 40%;
+    }
+
+    .contact__redes,
+    .contact__address {
+        align-items: start;
+    }
+}
+

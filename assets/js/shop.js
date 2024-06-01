@@ -135,14 +135,30 @@ function createSizeButtons(product) {
   sizeContainer.innerHTML = "";
 
   const sizePattern = {
+    oneSize: ["0", "1", "2"],
+    numericLetter: ["3M", "6M", "9M", "12M", "18M"],
     numeric: ["1-2", "3-4", "5-6", "7-8", "9-11", "12-14"],
-    letter: ["U", "XS", "S", "M", "L", "XL", "XXL", "3XL", "4XL"],
+    letter: ["U", "XS", "S", "M", "L", "XL", "XXL", "3XL", "4XL", "5XL"],
   };
 
-  const isNumericSize = product.sizes.some((item) =>
-    sizePattern.numeric.includes(item.size)
-  );
-  const sizes = isNumericSize ? sizePattern.numeric : sizePattern.letter;
+  let detectedSizeType;
+  if (product.sizes.some((item) => sizePattern.numeric.includes(item.size))) {
+    detectedSizeType = "numeric";
+  } else if (
+    product.sizes.some((item) => sizePattern.numericLetter.includes(item.size))
+  ) {
+    detectedSizeType = "numericLetter";
+  } else if (
+    product.sizes.some((item) => sizePattern.letter.includes(item.size))
+  ) {
+    detectedSizeType = "letter";
+  } else if (
+    product.sizes.some((item) => sizePattern.oneSize.includes(item.size))
+  ) {
+    detectedSizeType = "oneSize";
+  }
+
+  const sizes = sizePattern[detectedSizeType];
 
   sizes.forEach((size) => {
     const button = document.createElement("button");
@@ -150,7 +166,10 @@ function createSizeButtons(product) {
     button.setAttribute("data-size", size);
     button.textContent = size;
 
-    if (isNumericSize) {
+    if (
+      detectedSizeType === "numeric" ||
+      detectedSizeType === "numericLetter"
+    ) {
       button.style.fontSize = "1.6rem";
     }
 
