@@ -39,5 +39,20 @@ let vitrineHome = {
     {
       imageName: "8-B.jpg",
     },
+    {
+      imageName: "9-A.jpg",
+    },
+    {
+      imageName: "9-B.jpg",
+    },
+    {
+      imageName: "10-A.jpg",
+    },
+    {
+      imageName: "11-A.jpg",
+    },
+    {
+      imageName: "12-A.jpg",
+    },
   ],
 };
