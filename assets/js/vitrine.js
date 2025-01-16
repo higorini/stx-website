@@ -32,8 +32,10 @@ function createImageDivs() {
       figure.classList.add("vitrine__item");
       figure.classList.add("show");
       figure.classList.add("up");
+
       const imageName = parseInt(item.imageName.split("-")[0]);
       figure.classList.add(`vitrine__item--${imageName}`);
+      figure.setAttribute("data-group", `group-${shuffledGroups[i]}`);
 
       const img = document.createElement("img");
       img.src = `${path}${item.imageName}`;

@@ -20,11 +20,25 @@ const hiddenElements = document.querySelectorAll(".hidden");
 const showElements = document.querySelectorAll(".show");
 
 hiddenElements.forEach((el) => observer.observe(el));
-showElements.forEach((el) => observerShow.observe(el));
+showElements.forEach((el) => {
+  el.classList.add("up");
+  observerShow.observe(el);
+});
+
+const groups = new Map();
 
 showElements.forEach((el) => {
-  const delay = Math.random() * (0.6 - 0.3) + 0.3;
-  el.style.transitionDelay = `${delay}s`;
+  const groupId = el.dataset.group;
+  if (groupId) {
+    if (!groups.has(groupId)) {
+      const delay = Math.random() * 0.3 + 0.3;
+      groups.set(groupId, delay);
+    }
+    el.style.transitionDelay = `${groups.get(groupId)}s`;
+  } else {
+    const delay = Math.random() * 0.3 + 0.3;
+    el.style.transitionDelay = `${delay}s`;
+  }
 });
 
 let lastScrollPosition = window.pageYOffset;
